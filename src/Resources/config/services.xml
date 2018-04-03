@@ -14,5 +14,11 @@
         </service>
         <service id="Printi\CimpressBundle\Services\CimpressPrepress" alias="cimpress.prepress" />
 
+        <service id="cimpress.pdf.processing" class="Printi\CimpressBundle\Services\CimpressPdfProcessing">
+            <argument>%credentials%</argument>
+            <argument>%pdf_processing_client_id%</argument>
+        </service>
+        <service id="Printi\CimpressBundle\Services\CimpressPdfProcessing" alias="cimpress.pdf.processing" />
+
     </services>
 </container>

@@ -11,17 +11,32 @@ class Cimpress
 {
     const BASE_URL = 'https://cimpress.auth0.com/oauth/ro';
 
+    /** @var array The Cimpress credentials */
     private $credentials;
+
+    /** @var string The api client id */
     private $clientId;
 
+    /** @var  string The authorize token */
     private $token;
 
+    /**
+     * Cimpress constructor.
+     *
+     * @param array  $credentials The cimpress credentials
+     * @param string $clientId    The client id
+     */
     public function __construct(array $credentials, string $clientId)
     {
         $this->credentials = $credentials;
         $this->clientId = $clientId;
     }
 
+    /**
+     * Authorize with cimpress
+     *
+     * @return $this
+     */
     protected function authorize()
     {
         $client      = new Client();
@@ -41,6 +56,13 @@ class Cimpress
         return $this;
     }
 
+    /**
+     * Get Authorize token
+     *
+     * @param bool $bearer
+     *
+     * @return string
+     */
     protected function getToken($bearer = false)
     {
         return $bearer ? sprintf('Bearer %s', $this->token) : $this->token;
