@@ -1,0 +1,25 @@
+{
+  "name": "printi/cimpress",
+  "type": "symfony-bundle",
+  "description": "Cimpress API Wrapper",
+  "keywords": ["cimpress", "mcp", "pdf-processing", "prepress", "api"],
+  "homepage": "https://github.com/Printi/cimpress",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Tanuj Dave",
+      "email": "tanuj.dave@printi.com.br"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Printi\\CimpressBundle\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.0",
+    "symfony/framework-bundle": "^3.3",
+    "guzzlehttp/guzzle": ">=6.0"
+  }
+}
