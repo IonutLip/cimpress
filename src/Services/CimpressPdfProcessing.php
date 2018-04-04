@@ -1,22 +1,21 @@
 <?php
 
-namespace Printi\CimpressBundle\Services;
+namespace Cimpress\Services;
 
 /**
  * Class CimpressPdfProcessing
  */
-class CimpressPdfProcessing extends Cimpress
+class CimpressPdfProcessing extends BaseCimpress
 {
 
     /**
      * CimpressPdfProcessing constructor.
      *
-     * @param array  $credentials Cimpress designer credentials
-     * @param string $clientId    Cimpress api client id
+     * @param string $token
      */
-    public function __construct(array $credentials, string $clientId)
+    public function __construct(string $token)
     {
-        parent::__construct($credentials, $clientId);
+        parent::__construct($token);
     }
 
     /**

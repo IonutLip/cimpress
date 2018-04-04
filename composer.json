@@ -1,6 +1,6 @@
 {
   "name": "printi/cimpress",
-  "type": "symfony-bundle",
+  "type": "library",
   "description": "Cimpress API Wrapper",
   "keywords": ["cimpress", "mcp", "pdf-processing", "prepress", "api"],
   "homepage": "https://github.com/Printi/cimpress",
@@ -14,12 +14,11 @@
   ],
   "autoload": {
     "psr-4": {
-      "Printi\\CimpressBundle\\": "src/"
+      "Cimpress\\": "src/"
     }
   },
   "require": {
     "php": "^7.0",
-    "symfony/framework-bundle": "^3.3",
     "guzzlehttp/guzzle": ">=6.0"
   }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Printi\CimpressBundle\Exception;
+namespace Cimpress\Exception;
 
 /**
  * BaseException
